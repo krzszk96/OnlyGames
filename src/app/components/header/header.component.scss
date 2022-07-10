@@ -1,5 +1,35 @@
-.fa-magnifying-glass{
-  width: 50px;
-  color: red;
-  background-color: red ;
+nav{
+  display: flex;
+  align-items: center;
+  background-color: #383838;
+  padding: 10px 30px;
+}
+.site-title{
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+}
+.input-wrap{
+  position: relative;
+  margin-left: 20px;
+}
+input{
+  width: 350px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0 10px 50px;
+  cursor: pointer;
+  color: #383838;
+
+  &:focus, &:hover{
+    outline: none;
+  }
+}
+fa-icon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
