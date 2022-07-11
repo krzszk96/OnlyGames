@@ -1,6 +1,6 @@
 <div class="card-body">
   <img class="game-thumbnail" [src]="game.background_image" alt="img">
-  <div class="metacritic">{{game.metacritic}}</div>
+  <div class="metacritic" *ngIf="game.metacritic">{{game.metacritic}}</div>
   <div class="game-title">{{game.name}}</div>
   <div class="release-wrap">
     <p class="release-date">Release date:</p>

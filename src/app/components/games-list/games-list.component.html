@@ -1,6 +1,6 @@
 <div class="cards-wrap">
   <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
   <div class="more-btn-wrap">
-    <button class="more-games-btn">More</button>
+    <button class="more-games-btn" (click)="getMoreGames()">Load More</button>
   </div>
 </div>

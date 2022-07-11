@@ -9,16 +9,24 @@ import { Game } from 'src/app/interface/game';
 })
 export class GamesListComponent implements OnInit {
 
-  games: Game[] =[]
-  
+  games: Game[] =[];
+  nextPage: number = 2;
 
   constructor(private gamesService: GamesService) { }
 
   ngOnInit(): void {
     this.gamesService.getGames().subscribe((games) => {
       this.games = games.results;
-      console.log(games.results[1]);      
-      console.log(games);      
+      this.nextPage++;
+      // console.log(games);           
+    });
+  }
+
+  getMoreGames(){
+    this.gamesService.getMoreGames(this.nextPage).subscribe((games) => {
+      this.games = this.games.concat(games.results);   
+      if(!games.next){return} 
+      this.nextPage++;
     });
   }
 
