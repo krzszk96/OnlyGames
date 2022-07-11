@@ -21,4 +21,9 @@
   border: none;
   border-radius: 5px;
   background-color: #5e5f64;
+  border: 1px solid #5e5f64;
+
+  &:hover{
+    background-color: transparent;
+  }
 }

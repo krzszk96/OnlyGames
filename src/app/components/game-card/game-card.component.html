@@ -12,5 +12,6 @@
     <div class="genre" *ngFor="let genre of game.genres">{{ genre.name }}</div>
   </div>
 
-  <a routerLink="/game-details/{{game.id}}"><button (click)="getDetails(game.id)">more</button></a>
+  <a routerLink="/game-details/{{game.id}}" class="route-link"><button class="more-btn"
+      (click)="getDetails(game.id)">More details</button></a>
 </div>
