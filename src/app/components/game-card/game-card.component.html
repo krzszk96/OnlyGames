@@ -6,4 +6,11 @@
     <p class="release-date">Release date:</p>
     <div class="release-date_content">{{game.released}}</div>
   </div>
+
+  <div class="genres-wrap">
+    <p class="genres-name">Genres:</p>
+    <div class="genre" *ngFor="let genre of game.genres">{{ genre.name }}</div>
+  </div>
+
+  <a routerLink="/game-details/{{game.id}}"><button (click)="getDetails(game.id)">more</button></a>
 </div>

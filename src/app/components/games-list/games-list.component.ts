@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/services/games.service';
 import { Game } from 'src/app/interface/game';
+import { map, mergeMap } from 'rxjs';
 
 @Component({
   selector: 'app-games-list',
@@ -10,17 +11,20 @@ import { Game } from 'src/app/interface/game';
 export class GamesListComponent implements OnInit {
 
   games: Game[] =[];
-  nextPage: number = 2;
+  nextPage: number = 1;
 
   constructor(private gamesService: GamesService) { }
 
   ngOnInit(): void {
-    this.gamesService.getGames().subscribe((games) => {
+    this.gamesService.getGames(this.nextPage).subscribe((games) => {
       this.games = games.results;
-      this.nextPage++;
-      // console.log(games);           
+      this.nextPage++;      
     });
-  }
+
+    // this.gamesService.getGenres().subscribe(data => {
+    //   // console.log(data);      
+    // })
+  }  
 
   getMoreGames(){
     this.gamesService.getMoreGames(this.nextPage).subscribe((games) => {
@@ -29,5 +33,8 @@ export class GamesListComponent implements OnInit {
       this.nextPage++;
     });
   }
+
+  
+  
 
 }

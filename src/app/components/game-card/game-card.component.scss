@@ -1,11 +1,11 @@
 .card-body{
   width: 350px;
-  // height: 350px;
   background-color: #5e5f64;  
   padding: 0;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 img{
   width: 100%;
@@ -29,11 +29,12 @@ img{
   margin-right: 5px;
   margin-top: 5px;
 }
-.release-wrap{
+.release-wrap, .genres-wrap{
   display: flex;
   align-items: center;
   padding: 5px 0 ;
-  color: #292929;  
+  color: #fff;  
+  opacity: 0.5;
   border-bottom: 1px solid rgb(255, 255, 255, 0.1);
   margin: 0 10px 10px 10px;
 }
@@ -43,3 +44,17 @@ img{
 .release-date{
   margin: 0;
 }
+.genres-name{
+  margin: 0;
+  margin-right: 5px;
+}
+.genre{
+  margin-right: 5px;
+}
+// .genres-wrap{
+//   display: flex;
+//   align-items: center;
+//   padding: 5px 0;
+//   margin: 0 10px 10px 10px;
+//   border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+// }

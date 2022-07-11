@@ -9,6 +9,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GameCardComponent } from './components/game-card/game-card.component';
+import { GameDetailsComponent } from './components/game-details/game-details.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { GameCardComponent } from './components/game-card/game-card.component';
     HeaderComponent,
     HomepageComponent,
     GamesListComponent,
-    GameCardComponent
+    GameCardComponent,
+    GameDetailsComponent
   ],
   imports: [
     BrowserModule,

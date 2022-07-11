@@ -5,4 +5,5 @@ background_image?: string;
 rating?: number;
 released?: string;
 metacritic?: number;
+genres?: Array<any>;
 }

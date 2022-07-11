@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Game } from 'src/app/interface/game';
+import { GamesService } from 'src/app/services/games.service';
 
 @Component({
   selector: 'app-game-card',
@@ -10,10 +11,21 @@ export class GameCardComponent implements OnInit {
 
   @Input() game:Game ={};
 
-  constructor() { }
+  constructor(private gamesService: GamesService) { }
 
   ngOnInit(): void {
     
+  }
+
+  // gameDetails(game: Game){
+  //   console.log(game);
+    
+  // }
+  getDetails(gameId:any){
+    this.gamesService.getGameDetails(gameId).subscribe(data =>{
+      console.log(data);
+      
+    })
   }
 
 }

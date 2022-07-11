@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { mergeMap, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 const options = {
@@ -17,19 +17,22 @@ const options = {
 
 export class GamesService {
 
-  $games?: Observable<{}>;
 
   private apiUrl = `https://rawg-video-games-database.p.rapidapi.com/games?key=${environment.rawgApiKey}`;
 
   constructor(private http: HttpClient) { }
 
-  getGames(): Observable<any> {    
-    return this.$games = this.http.get(this.apiUrl + '&page=' + 1,options);
+  getGames(page:number): Observable<any> {    
+    return this.http.get(this.apiUrl + '&page=' + page, options);
   }
 
   getMoreGames(page:number): Observable<any> {    
-    return this.$games = this.http.get(this.apiUrl + '&page=' + page,options);
+    return this.http.get(this.apiUrl + '&page=' + page, options);
   }
+  getGameDetails( id:number): Observable<any> {    
+    return this.http.get(`https://rawg-video-games-database.p.rapidapi.com/games/${id}?key=${environment.rawgApiKey}` , options);
+  }
+
 
 }
 
