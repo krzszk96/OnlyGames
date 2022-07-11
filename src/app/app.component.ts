@@ -14,10 +14,10 @@ export class AppComponent {
   constructor(private gamesService: GamesService){}
 
   ngOnInit(): void {
-    this.gamesService.getGames().subscribe((games) => {
-      this.games = games.results;
-      console.log(games.results[1]);      
-      console.log(games);      
-    });
+    // this.gamesService.getGames().subscribe((games) => {
+    //   this.games = games.results;
+    //   console.log(games.results[1]);      
+    //   console.log(games);      
+    // });
   }
 }

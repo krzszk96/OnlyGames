@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GameCardComponent } from './components/game-card/game-card.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent,
     HeaderComponent,
     HomepageComponent,
-    GamesListComponent
+    GamesListComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
