@@ -6,4 +6,8 @@ rating?: number;
 released?: string;
 metacritic?: number;
 genres?: Array<any>;
+description_raw?: string;
+developers?: Array<any>;
+tags?:Array<any>;
+website?:string;
 }

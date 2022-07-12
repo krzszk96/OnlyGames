@@ -1,0 +1,99 @@
+:host{  
+  display: flex;
+  justify-content: center;
+}
+.details-page-wrap{
+  width: 900px;
+  position: relative;
+
+  @media (max-width: 928px) {
+    width: 600px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+  }
+
+  @media (max-width: 568px) {
+    width: 300px;
+  }
+}
+.back-btn{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+.cover-img{
+  width: 100%;
+}
+.metacritic{
+  width: 28px;
+  height: 28px;
+  color: #98dc2b;
+  border: 1px solid #98dc2b;
+  border-radius: 2px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.game-title{
+  color: #fff;
+  padding: 10px 30px;
+
+  @media (max-width: 568px) {
+    padding: 10px;
+  }
+}
+.game-desc{
+  color: #fff;
+  padding: 10px 30px;
+
+  @media (max-width: 568px) {
+    padding: 10px;
+  }
+}
+.release-wrap, .genres-wrap, .developers-wrap, .tags-wrap, .web-wrap{
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  color: #fff;  
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  margin: 0 10px 10px 10px;
+
+  @media (max-width: 568px) {
+    padding: 10px;
+  }
+}
+.tags-wrap{
+  border-bottom: none;
+}
+.release-date_content{
+  margin-left: 5px;
+}
+.release-date{
+  margin: 0;
+}
+.genres-name, .genre, .dev-name, .dev, .tags-name, .web-name{
+  margin: 0;
+  margin-right: 5px;
+}
+.tags-wrap, .web-wrap{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.tag{
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  background-color: #292929;
+  border-radius: 15px;
+  padding: 3px 15px;
+  margin: 2px;
+}
+.game-web-link{
+  color: #fff;
+}

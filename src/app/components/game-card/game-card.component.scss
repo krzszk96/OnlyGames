@@ -5,6 +5,10 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 320px;
+  }
 }
 img{
   width: 100%;
@@ -30,6 +34,7 @@ img{
 }
 .release-wrap, .genres-wrap{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 5px 0 ;
   color: #fff;  

@@ -13,19 +13,12 @@ export class GameCardComponent implements OnInit {
 
   constructor(private gamesService: GamesService) { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
-  // gameDetails(game: Game){
-  //   console.log(game);
-    
-  // }
   getDetails(gameId:any){
-    this.gamesService.getGameDetails(gameId).subscribe(data =>{
-      console.log(data);
-      
-    })
+    // this.gamesService.getGameDetails(gameId).subscribe(data =>{
+    //   console.log(data);      
+    // })
   }
 
 }

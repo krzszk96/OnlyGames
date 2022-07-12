@@ -3,6 +3,11 @@ nav{
   align-items: center;
   background-color: #292929;  
   padding: 10px 30px;
+
+  @media (max-width: 768px) { 
+    flex-direction: column;
+    // padding: 0;
+  }
 }
 .site-title{
   font-size: 2rem;
@@ -12,6 +17,11 @@ nav{
 .input-wrap{
   position: relative;
   margin-left: 20px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;    
+    margin-bottom: 20px;
+  }
 }
 input{
   width: 350px;
@@ -24,6 +34,12 @@ input{
   &:focus, &:hover{
     outline: none;
   }
+
+  @media (max-width: 768px) {
+    width: 250px;
+    padding: 10px 0 10px 30px;
+    font-size: 0.8rem;
+  }
 }
 fa-icon{
   position: absolute;
@@ -32,4 +48,8 @@ fa-icon{
   left: 10px;
   font-size: 1.5rem;
   opacity: 0.8;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 }

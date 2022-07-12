@@ -21,9 +21,6 @@ export class GamesListComponent implements OnInit {
       this.nextPage++;      
     });
 
-    // this.gamesService.getGenres().subscribe(data => {
-    //   // console.log(data);      
-    // })
   }  
 
   getMoreGames(){
@@ -33,8 +30,4 @@ export class GamesListComponent implements OnInit {
       this.nextPage++;
     });
   }
-
-  
-  
-
 }

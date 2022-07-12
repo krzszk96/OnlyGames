@@ -1,1 +1,37 @@
-<p>game-details works!</p>
+<div class="details-page-wrap">
+  <a routerLink="/home"><button class="back-btn">Go back</button></a>
+
+  <img class="cover-img" [src]="game.background_image" alt="cover photo">
+  <div class="metacritic" *ngIf="game.metacritic">{{ game.metacritic }}</div>
+  <h1 class="game-title">{{ game.name }}</h1>
+  <p class="game-desc">{{ game.description_raw }}</p>
+
+  <div class="release-wrap">
+    <p class="release-date">Release date:</p>
+    <div class="release-date_content">{{ game.released }}</div>
+  </div>
+
+  <div class="genres-wrap">
+    <p class="genres-name">Genres:</p>
+    <div class="genre" *ngFor="let genre of game.genres">{{ genre.name }},</div>
+  </div>
+
+  <div class="developers-wrap">
+    <p class="dev-name">Developers:</p>
+    <div class="dev" *ngFor="let devs of game.developers">{{ devs.name }},</div>
+  </div>
+
+  <div class="web-wrap">
+    <p class="web-name">Game website:</p>
+    <a class="game-web-link" [href]="game.website">
+      <div class="game-web">{{ game.website }}</div>
+    </a>
+  </div>
+
+
+  <div class="tags-wrap">
+    <p class="tags-name">Tags:</p>
+    <div class="tag" *ngFor="let tag of game.tags">{{ tag.name }}</div>
+  </div>
+
+</div>

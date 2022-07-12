@@ -29,6 +29,7 @@ export class GamesService {
   getMoreGames(page:number): Observable<any> {    
     return this.http.get(this.apiUrl + '&page=' + page, options);
   }
+  
   getGameDetails( id:number): Observable<any> {    
     return this.http.get(`https://rawg-video-games-database.p.rapidapi.com/games/${id}?key=${environment.rawgApiKey}` , options);
   }

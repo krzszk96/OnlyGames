@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Game } from 'src/app/interface/game';
+import { GamesService } from 'src/app/services/games.service';
 
 @Component({
   selector: 'app-game-details',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameDetailsComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  game:Game ={};
+
+  constructor(private gamesService: GamesService, private route: ActivatedRoute) { 
+    this.id = this.route.snapshot.params['id'];
+  }
 
   ngOnInit(): void {
+    this.gamesService.getGameDetails(this.id).subscribe(game =>{
+      this.game = game;
+      console.log(game);
+      
+    })
   }
 
 }
